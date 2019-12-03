@@ -1,0 +1,65 @@
+---
+title: "Test"
+author: "YunHaeun"
+date: "2019년 12월 3일"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# R을 이용한 웹페이지
+
+## 나는 누굴까?,,,
+
+### 한림이 
+내 이름은 **인재의숲** 뜻이다. 나는 내 이름을 무척 좋아한다.
+
+### 빅데이터 
+빅데이터는 *빅데이터*를 배우는 학과이다. 
+
+### 좋아하는 것들
++ 친구
+  - 친구1
+  친구1은 누구나 좋아하는 소중한 친구이다.
+  - 친구2
++ 애착 물건
+  - 스마트폰1
+  - 가방
++ 음식
+  - 자장면
+  - 육개장
+  
+### 일상 
+
+![](img/imgimg.jpg)
+
+
+
+# 자료분석 
+
+## ggplot2의 mpg 데이터
+필요한 패키지를 불러옵니다. 
+```{r}
+library(ggplot2)
+```
+
+
+우리는 자동차 경비 데이터인 mpg 데이터를 이용하여 배기량과 도시연비의 관계를 그래프로 살펴보겠다.
+
+먼저, mpg 데이터를 살펴보겠습니다.
+
+```{r}
+head(mpg,10)
+```
+
+산포도를 그려서 두 변수의 관계를 살펴봅니다.
+
+```{r}
+ggplot(mpg, aes(x=displ, y=cty)) +
+  geom_point(aes(color=displ, size=drv))
+```
+
+
+
